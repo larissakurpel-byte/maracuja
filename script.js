@@ -6,80 +6,70 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Você está procurando uma nova leitura de romance internacional para o final de semana. Qual gênero chama mais sua atenção de primeira?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
-                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer.",
-                ""
-            ]
+                texto: "Um romance de época com bailes, trajes sofisticados e intrigas da alta sociedade.",
+                afirmacao: "Você se atrai por histórias clássicas e envolventes de épocas passadas."
             },
             {
-                texto: "Isso é maravilhoso!",
-                afirmacao: [
-                      "Quis saber como usar IA no seu dia dia." ,
-                        ""
-                ]
-            }           
-            
-        ]
-    },
-    {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial (IA), uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre elaIA. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de tecnologia em sala de aula. Qual atitude você toma?",
-        alternativas: [
-            {
-                texto:"Utilizar uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento",
-                afirmacao:"afirmacao"
-            },
-            {
-                texto: "Escrever o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao:"afirmacao"
+                texto: "Um romance contemporâneo leve e divertido, cheio de situações cotidianas.",
+                afirmacao: "Sua preferência é por tramas modernas, dinâmicas e cheias de humor."
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Ao escolher a dinâmica dos personagens principais, qual 'trópico' de romance mais te atrai?",
         alternativas: [
             {
-                texto:"Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao:"afirmacao"
+                texto: "Namoro de mentira ('Fake Dating'), onde o casal finge estar junto até surgir um sentimento real.",
+                afirmacao: "Adora acompanhar a evolução gradual do afeto através do convivio forçado."
             },
             {
-                texto:"Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao:"afirmacao"
+                texto: "De inimigos a amantes ('Enemies to Lovers'), onde a implicância inicial se transforma em paixão.",
+                afirmacao: "Gosta de diálogos afiados e da tensão entre personagens que começam se rivalizando."
             }
-            
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Onde você prefere que a história se passe?",
         alternativas: [
             {
-                texto:"Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao:"afirmacao"
+                texto: "Em uma grande metrópole internacional como Londres ou Nova York.",
+                afirmacao: "Sente fascínio por cenários urbanos e agitados como pano de fundo do romance."
             },
             {
-                texto:"Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao:"afirmacao"
+                texto: "Em uma pequena cidade acolhedora ou vila histórica no interior.",
+                afirmacao: "Prefere cenários aconchegantes que trazem uma sensação de conforto à leitura."
             }
-            
         ]
     },
     {
-        enunciado: " Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda de uma IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
+        enunciado: "Sobre o tom da narrativa, o que você busca ao abrir o livro?",
         alternativas: [
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao:"afirmacao"
+                texto: "Uma história emocionante e profunda, capaz de arrancar algumas lágrimas.",
+                afirmacao: "Busca conexões emocionais intensas e histórias que marcam pelo drama."
             },
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao:"afirmacao"
+                texto: "Uma leitura leve e reconfortante para relaxar e dar risadas.",
+                afirmacao: "Procura leituras que tragam leveza e sirvam como um refúgio para o dia a dia."
             }
-            
-            
         ]
     },
+    {
+        enunciado: "Como você prefere o ritmo do final da história?",
+        alternativas: [
+            {
+                texto: "Um final feliz clássico e bem fechado, onde tudo se resolve perfeitamente.",
+                afirmacao: "Valoriza a satisfação de um desfecho redondo com um final feliz garantido."
+            },
+            {
+                texto: "Um final realista e aberto a interpretações sobre o futuro dos personagens.",
+                afirmacao: "Aprecia desfechos maduros que refletem a complexidade das relações reais."
+            }
+        ]
+    }
 ];
 
 let atual = 0; 
@@ -114,7 +104,7 @@ function respostaSelecionada(opcaoSelecionada){
 }
 
 function mostraResultado(){
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Seu perfil de leitor de romance...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = ""; 
 }
